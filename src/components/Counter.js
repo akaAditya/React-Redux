@@ -1,20 +1,26 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { decrementby2, incrementby2 } from '../store/counterSlice'
-import classes from './Counter.module.css'
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { decrementby2, decrementby5, incrementby2, incrementby5 } from "../store/counterSlice";
+import classes from "./Counter.module.css";
 
 export default function Counter() {
-  const count = useSelector((state) => state.counter.value)
-  const dispatch = useDispatch()
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
 
   return (
     <div>
       <main className={classes.counter}>
-       <h1>Redux Counter</h1>
-       <div className={classes.value}>{count}</div>
-       <button onClick={() => dispatch(decrementby2())}>Decrement</button>
-       <button onClick={() => dispatch(incrementby2())}>Increment</button>
-     </main>
+        <h1>Redux Counter</h1>
+        <div className={classes.value}>{count}</div>
+        <div>
+          <button onClick={() => dispatch(decrementby2())}>Decrement-2</button>
+          <button onClick={() => dispatch(incrementby2())}>Increment-2</button>
+        </div>
+        <div>
+          <button onClick={() => dispatch(decrementby5())}>Decrement-5</button>
+          <button onClick={() => dispatch(incrementby5())}>Increment-5</button>
+        </div>
+      </main>
     </div>
-  )
+  );
 }
