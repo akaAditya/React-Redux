@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { decrementby2, decrementby5, incrementby2, incrementby5 } from "../store/counterSlice";
+import { decrementby2, decrementby5, increase, incrementby2, incrementby5, toggle } from "../store/counterSlice";
 import classes from "./Counter.module.css";
 
 export default function Counter() {
@@ -19,6 +19,12 @@ export default function Counter() {
         <div>
           <button onClick={() => dispatch(decrementby5())}>Decrement-5</button>
           <button onClick={() => dispatch(incrementby5())}>Increment-5</button>
+        </div>
+        <div>
+          <button onClick={() => dispatch(increase())}>Toggle Counter</button>
+        </div>
+        <div>
+          <button onClick={() => dispatch(toggle())}>Toggle Counter</button>
         </div>
       </main>
     </div>
