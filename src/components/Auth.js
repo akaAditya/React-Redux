@@ -1,5 +1,5 @@
 import classes from "./Auth.module.css";
-import { login } from "../store/counterSlice";
+import { login } from "../store/auth-slice";
 import { useDispatch } from "react-redux";
 
 const Auth = () => {

@@ -7,7 +7,7 @@ import {
   incrementby2,
   incrementby5,
   toggle,
-} from "../store/counterSlice";
+} from "../store/counter-slice";
 import classes from "./Counter.module.css";
 
 export default function Counter() {
